@@ -16,8 +16,8 @@ async def on_command_error(ctx, error):
 
 @bot.command()
 async def stert_server(ctx):
-    client = boto3.client('ec2')
-    response = ec2_client().start_instances(instances=instance)
+#    client = boto3.client('ec2')
+#    response = ec2_client().start_instances(instances=instance)
     await ctx.send('Accept.')
 
 
