@@ -1,7 +1,7 @@
 from discord.ext import commands
 import os
 import traceback
-import urllib.request
+#import urllib.request
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
@@ -15,9 +15,9 @@ async def on_command_error(ctx, error):
 
 @bot.command()
 async def startserver(ctx):
-    req = urllib.request.Request('API_URL')
-    with urllib.request.urlopen(req) as res:
-    await ctx.send(res.read())
+#    req = urllib.request.Request('API_URL')
+#    with urllib.request.urlopen(req) as res:
+    await ctx.send('test')
 
 
 bot.run(token)
