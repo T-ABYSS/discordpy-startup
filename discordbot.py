@@ -16,7 +16,7 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def startserver(ctx):
     async with aiohttp.ClientSession() as session:
-        async with session.get('API_URL') as r:
+        async with session.get(API_URL) as r:
             if r.status == 200:
                 await ctx.send(r.text())
 
