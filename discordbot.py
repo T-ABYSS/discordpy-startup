@@ -1,7 +1,7 @@
+import boto3
 from discord.ext import commands
 import os
 import traceback
-#import boto3
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
