@@ -5,6 +5,7 @@ import aiohttp
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
+url = os.environ['TARGET_API_URL']
 
 @bot.event
 async def on_command_error(ctx, error):
@@ -16,7 +17,7 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def startserver(ctx):
     async with aiohttp.ClientSession() as session:
-        async with session.get(API_URL) as r:
+        async with session.get(url) as r:
             if r.status == 200:
                 await ctx.send(r.text())
 
