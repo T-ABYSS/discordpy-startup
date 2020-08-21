@@ -5,7 +5,7 @@ import boto3
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
-#instance = 'EC2_INCETANCE_ID'
+instance = 'EC2_INCETANCE_ID'
 
 @bot.event
 async def on_command_error(ctx, error):
@@ -15,7 +15,7 @@ async def on_command_error(ctx, error):
 
 
 @bot.command()
-async def start_server(ctx):
+async def startserver(ctx):
 #    client = boto3.client('ec2')
 #    response = ec2_client().start_instances(instances=instance)
     await ctx.send('Accept.')
