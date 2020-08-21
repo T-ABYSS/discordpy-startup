@@ -19,7 +19,7 @@ async def startserver(ctx):
     async with aiohttp.ClientSession() as session:
         async with session.get(url) as r:
             if r.status == 200:
-                ctx.send(await r.text())
+                await ctx.send(await r.text())
 
 
 bot.run(token)
